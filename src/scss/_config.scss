@@ -17,6 +17,14 @@ $heroTextFontSize: 2.1rem;
   max-width: 1250px;
 }
 
+@mixin overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 // media queries breakpoints
 @mixin mediaQuery($breakpoint) {
   @if $breakpoint == tablet {
@@ -33,12 +41,5 @@ $heroTextFontSize: 2.1rem;
     @media screen and (min-width: 1150px) {
       @content;
     }
-  }
-}
-
-// keyframes
-@keyframes imageSlide {
-  to {
-    transform: translateX(0%);
   }
 }

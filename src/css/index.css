@@ -1,17 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;700;800&family=Poppins:wght@400;500;600;700;800&display=swap");
-@-webkit-keyframes imageSlide {
-  to {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-  }
-}
-@keyframes imageSlide {
-  to {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-  }
-}
-
 * {
   margin: 0;
   padding: 0;

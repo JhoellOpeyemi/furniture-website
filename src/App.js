@@ -1,4 +1,5 @@
 import About from "./components/About";
+import Gallery from "./components/Gallery";
 import Hero from "./components/Hero";
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
       <Hero />
       <div className="container">
         <About />
+        <Gallery />
       </div>
     </>
   );
