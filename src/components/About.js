@@ -37,7 +37,7 @@ const About = () => {
       .to(fourthImage, { x: "0%", duration: 0.5, delay: 0.3 })
       .to(fifthImage, { x: "0%", duration: 0.5, delay: 0.3 })
       .to(sixthImage, { x: "0%", duration: 0.5, delay: 0.3 })
-      .to(scrollRef, { y: "-60%", duration: 3, delay: "-2.3" })
+      .to(scrollRef, { y: "-60%", duration: 3 })
       .to(scrollRef, { opacity: 0, delay: 1 });
   });
 
