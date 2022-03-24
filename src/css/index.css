@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;700;800&family=Poppins:wght@400;500;600;700;800&display=swap");
+@-webkit-keyframes imageSlide {
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+@keyframes imageSlide {
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #ddd;
+  background-color: #131313;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+p {
+  line-height: 1.7;
+  font-size: 1.2rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  max-width: 1250px;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: 4px;
+  margin: 0 0 1rem;
+}
