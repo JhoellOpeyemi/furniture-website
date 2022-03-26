@@ -1,6 +1,7 @@
 import About from "./components/About";
 import Gallery from "./components/Gallery";
 import Hero from "./components/Hero";
+import OrderProcess from "./components/OrderProcess";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <div className="container">
         <About />
         <Gallery />
+        <OrderProcess />
       </div>
     </>
   );

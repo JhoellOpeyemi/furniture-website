@@ -1,24 +1,42 @@
 @import "config";
 
 .gallery-section {
-  .section-title {
-  }
+  width: 90%;
+  margin: 10rem auto;
 
   .gallery-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     gap: 1.5rem;
-    margin: 3rem 0;
     flex-wrap: nowrap;
     overflow-x: scroll;
+    overflow-y: hidden;
+    padding: 0 0 0.9rem;
+
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+      border-radius: 1rem;
+      background-color: $sliderBg;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 1rem;
+      background-color: darken($color: $secondaryColor, $amount: 40);
+    }
 
     .gallery-image {
       position: relative;
       display: inline-block;
       width: 70%;
-      height: 400px;
+      height: 500px;
       object-fit: cover;
+      transform: translateY(120%);
+    }
+
+    @include mediaQuery(bigTablet) {
     }
   }
 }

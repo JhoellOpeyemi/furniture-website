@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 // import { useInView } from "react-intersection-observer";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import "../css/about.css";
 
@@ -11,6 +12,8 @@ import image4 from "../assets/slider-4.jpg";
 import image5 from "../assets/slider-5.jpg";
 import image6 from "../assets/slider-6.jpg";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const About = () => {
   let scrollRef = useRef(null);
   let firstImage = useRef(null);
@@ -20,14 +23,21 @@ const About = () => {
   let fifthImage = useRef(null);
   let sixthImage = useRef(null);
 
-  const tl = gsap.timeline({
-    repeat: -1,
-    repeatDelay: 0.2,
-  });
-
   useEffect(() => {
+    const tl = gsap.timeline({
+      repeat: -1,
+      repeatDelay: 0.2,
+      scrollTrigger: {
+        trigger: scrollRef,
+        start: "top center",
+      },
+    });
+
     tl.to(scrollRef, { opacity: 1 })
-      .to(firstImage, { x: "0%", duration: 0.5 })
+      .to(firstImage, {
+        x: "0%",
+        duration: 0.5,
+      })
       .to(secondImage, {
         x: "0%",
         duration: 0.5,
@@ -37,8 +47,8 @@ const About = () => {
       .to(fourthImage, { x: "0%", duration: 0.5, delay: 0.3 })
       .to(fifthImage, { x: "0%", duration: 0.5, delay: 0.3 })
       .to(sixthImage, { x: "0%", duration: 0.5, delay: 0.3 })
-      .to(scrollRef, { y: "-60%", duration: 3 })
-      .to(scrollRef, { opacity: 0, delay: 1 });
+      .to(scrollRef, { y: "-60%", duration: 3, delay: "-2.5" })
+      .to(scrollRef, { opacity: 0, delay: 0.6 });
   });
 
   return (
