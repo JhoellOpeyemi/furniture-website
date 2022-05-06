@@ -1,0 +1,41 @@
+.products-nav-container {
+  margin: 4.875rem 0;
+
+  .subtitle {
+    font-family: $fontPoppins;
+    font-style: italic;
+    font-size: 1.085rem;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #aaa;
+    margin-top: 1rem;
+
+    @include mediaQuery(bigTablet) {
+      // @include containerWidth();
+    }
+  }
+
+  .nav-btn-wrapper {
+    @include containerWidth(100%);
+    @include flex();
+    flex-wrap: wrap;
+    margin-top: 1.8rem;
+
+    @include mediaQuery(bigTablet) {
+      @include containerWidth();
+      margin-top: 2rem;
+    }
+  }
+
+  .filter-btn {
+    margin-bottom: 1rem;
+
+    &:not(:last-child) {
+      margin-right: 0.7rem;
+    }
+
+    @include mediaQuery(bigTablet) {
+      margin-bottom: 0;
+    }
+  }
+}

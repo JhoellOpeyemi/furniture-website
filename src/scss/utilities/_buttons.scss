@@ -1,0 +1,43 @@
+.secondary-btn {
+  position: relative;
+  background: transparent;
+  border: 0;
+  color: $secondaryColor;
+  font-family: $fontBaloo;
+  font-size: 1.3rem;
+  font-weight: 500;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -0.2rem;
+    width: 40%;
+    height: 0.15rem;
+    background-color: $secondaryColor;
+    transition: all 0.4s ease-in-out;
+  }
+
+  &:hover::before {
+    width: 100%;
+  }
+}
+
+.filter-btn {
+  font-size: 1rem;
+  font-family: $fontBaloo;
+  font-weight: 500;
+  background-color: transparent;
+  color: $filterBtnColor;
+  padding: 0.75rem 0.875rem;
+  border: none;
+  border-radius: 0.625rem;
+  transition: all 0.3s ease;
+
+  @include mediaQuery(bigTablet) {
+    font-size: 1.25rem;
+  }
+
+  &.selected {
+    background-color: $filterBtnBg;
+  }
+}

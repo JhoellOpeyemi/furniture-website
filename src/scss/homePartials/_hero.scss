@@ -1,0 +1,59 @@
+.hero-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  .hero-section {
+    @include containerWidth;
+    height: 100%;
+  }
+
+  .hero-bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+  }
+
+  .video-overlay {
+    @include overlay(
+      linear-gradient(180deg, rgba(0, 0, 0, 0.8) 65%, rgba(0, 0, 0, 0) 100%)
+    );
+    z-index: -1;
+  }
+
+  .text-wrapper {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .hero-text {
+      font-family: $fontBaloo;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-align: center;
+
+      @include mediaQuery(tablet) {
+        font-size: 2.7rem;
+        letter-spacing: 4px;
+      }
+
+      @include mediaQuery(bigTablet) {
+        font-size: 3.3rem;
+        letter-spacing: 6px;
+        word-spacing: 10px;
+      }
+
+      @include mediaQuery(desktop) {
+        font-size: 3.8rem;
+      }
+    }
+  }
+}

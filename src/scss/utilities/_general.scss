@@ -1,0 +1,24 @@
+@use "../partials/mixins" as *;
+
+.section-title {
+  font-family: $fontBaloo;
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: 4px;
+
+  @include mediaQuery(bigTablet) {
+    font-size: 2.8rem;
+  }
+}
+
+.page-title {
+  font-family: $fontBaloo;
+  text-align: center;
+  font-size: 2.375rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+
+  @include mediaQuery(bigTablet) {
+    font-size: 3.4375rem;
+  }
+}
