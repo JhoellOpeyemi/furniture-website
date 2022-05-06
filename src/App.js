@@ -1,17 +1,23 @@
-import About from "./components/About";
-import Gallery from "./components/Gallery";
-import Hero from "./components/Hero";
-import OrderProcess from "./components/OrderProcess";
+import { Route, Routes } from "react-router-dom";
+import Home from "./components/pages/Home";
+import Products from "./components/pages/Products";
+import ProductCategory from "./components/pagesComponents/ProductCategory";
+
+import { ProductProvider } from "./contexts/ProductContext";
+
+import "./css/styles.css";
 
 function App() {
   return (
     <>
-      <Hero />
-      <div className="container">
-        <About />
-        <Gallery />
-        <OrderProcess />
-      </div>
+      <ProductProvider>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />}>
+            <Route path=":category" element={<ProductCategory />} />
+          </Route>
+        </Routes>
+      </ProductProvider>
     </>
   );
 }
