@@ -25,6 +25,10 @@ button {
   cursor: pointer;
 }
 
+li {
+  list-style-type: none;
+}
+
 .container {
   @include containerWidth();
   overflow-x: hidden;

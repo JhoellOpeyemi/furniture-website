@@ -3,6 +3,8 @@ import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+import { Link } from "react-router-dom";
+
 import gallery1 from "../../assets/gallery-1.jpg";
 import gallery2 from "../../assets/gallery-2.jpg";
 import gallery3 from "../../assets/gallery-3.jpg";
@@ -58,7 +60,9 @@ const Gallery = () => {
         />
       </div>
       <div className="btn-wrapper">
-        <button className="secondary-btn">See All</button>
+        <Link to="/products" className="secondary-btn">
+          See All
+        </Link>
       </div>
     </section>
   );

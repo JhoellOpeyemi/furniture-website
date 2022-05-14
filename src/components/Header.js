@@ -12,6 +12,11 @@ const Header = () => {
   const openNav = () => {
     setNav(!nav);
   };
+
+  const closeNav = () => {
+    setNav(false);
+  };
+
   return (
     <header className="header">
       <div className="logo-nav-wrapper">
@@ -25,6 +30,7 @@ const Header = () => {
               className={({ isActive }) =>
                 isActive ? "nav-links selected" : "nav-links"
               }
+              onClick={closeNav}
             >
               Home
             </NavLink>
@@ -36,6 +42,7 @@ const Header = () => {
               className={({ isActive }) =>
                 isActive ? "nav-links selected" : "nav-links"
               }
+              onClick={closeNav}
             >
               Products
             </NavLink>

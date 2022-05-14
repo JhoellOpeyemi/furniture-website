@@ -3,21 +3,34 @@ import ProductsFilterBtn from "./ProductsFilterBtn";
 const ProductsNav = () => {
   const buttons = [
     {
+      id: "79250107",
       name: "Living rooms",
-      urlText: "living-rooms",
+      urlQuery: "living-rooms",
+      categoryText: "livingRooms",
     },
     {
+      id: "OKWQGAcz5ww",
       name: "Dining rooms",
-      urlText: "dining-rooms",
+      urlQuery: "dining-rooms",
+      categoryText: "diningRooms",
     },
-    { name: "Bedrooms", urlText: "bedrooms" },
     {
+      id: "3819529",
+      name: "Bedrooms",
+      urlQuery: "bedrooms",
+      categoryText: "bedrooms",
+    },
+    {
+      id: "8890044",
       name: "Decorations",
-      urlText: "decorations",
+      urlQuery: "decorations",
+      categoryText: "decorations",
     },
     {
-      name: "Offices & Workspaces",
-      urlText: "offices-and-workspaces",
+      id: "23475570",
+      name: "Offices",
+      urlQuery: "offices",
+      categoryText: "offices",
     },
   ];
 
@@ -31,7 +44,9 @@ const ProductsNav = () => {
             <ProductsFilterBtn
               key={button.name}
               name={button.name}
-              urlText={button.urlText}
+              urlQuery={button.urlQuery}
+              categoryText={button.categoryText}
+              id={button.id}
             />
           );
         })}

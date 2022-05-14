@@ -26,10 +26,14 @@ button {
   cursor: pointer;
 }
 
+li {
+  list-style-type: none;
+}
+
 .container {
   width: 90%;
   margin: auto;
-  max-width: 1250px;
+  max-width: 1200px;
   overflow-x: hidden;
 }
 
@@ -100,6 +104,14 @@ button {
   background-color: rgba(226, 189, 146, 0.3);
 }
 
+.pagination-btn {
+  background-color: #e2bd92;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 1.375rem;
+  padding: 0.3rem 1rem;
+}
+
 .header {
   margin-top: 1.5rem;
 }
@@ -117,7 +129,7 @@ button {
   flex-direction: row;
 }
 .header .logo {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   color: #e2bd92;
   font-family: "Baloo 2", cursive;
   letter-spacing: 4px;
@@ -181,7 +193,7 @@ button {
 }
 @media screen and (min-width: 850px) {
   .header .nav-links {
-    font-size: 1.625rem;
+    font-size: 1.4rem;
     color: #bbb;
   }
   .header .nav-links:not(:last-child)::before {
@@ -212,6 +224,13 @@ button {
 .header .nav-links.selected:not(:last-child)::before {
   width: 100%;
 }
+.header .nav .cart-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 2.2rem;
+}
 .header .hamburger {
   z-index: 3;
   background: transparent;
@@ -237,7 +256,7 @@ button {
 .hero-container .hero-section {
   width: 90%;
   margin: auto;
-  max-width: 1250px;
+  max-width: 1200px;
   height: 100%;
 }
 .hero-container .hero-bg-video {
@@ -529,16 +548,21 @@ button {
 .products-nav-container .subtitle {
   font-family: "Poppins", sans-serif;
   font-style: italic;
-  font-size: 1.085rem;
+  font-size: 0.9rem;
   letter-spacing: 2px;
   text-align: center;
   color: #aaa;
   margin-top: 1rem;
 }
+@media screen and (min-width: 850px) {
+  .products-nav-container .subtitle {
+    font-size: 1.1rem;
+  }
+}
 .products-nav-container .nav-btn-wrapper {
   width: 100%;
   margin: auto;
-  max-width: 1250px;
+  max-width: 1200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -550,7 +574,7 @@ button {
   .products-nav-container .nav-btn-wrapper {
     width: 90%;
     margin: auto;
-    max-width: 1250px;
+    max-width: 1200px;
     margin-top: 2rem;
   }
 }
@@ -564,4 +588,62 @@ button {
   .products-nav-container .filter-btn {
     margin-bottom: 0;
   }
+}
+
+.products-category-section .products-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 3.45rem 3rem;
+}
+.products-category-section .products-wrapper .product-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+.products-category-section .products-wrapper .product-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+@media screen and (min-width: 850px) {
+  .products-category-section .products-wrapper .product-details {
+    padding: 0 1.3rem;
+  }
+}
+.products-category-section .products-wrapper .name {
+  font-size: 1.135rem;
+  margin-right: 2rem;
+  line-height: 1.5;
+}
+@media screen and (min-width: 850px) {
+  .products-category-section .products-wrapper .name {
+    font-size: 1.2rem;
+  }
+}
+.products-category-section .products-wrapper .price {
+  font-size: 1.375rem;
+  color: #e2bd92;
+  font-family: "Baloo 2", cursive;
+}
+@media screen and (min-width: 850px) {
+  .products-category-section .products-wrapper .price {
+    font-size: 1.5rem;
+  }
+}
+
+.pagination {
+  margin: 4rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.pagination-number-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }

@@ -1,7 +1,7 @@
 @mixin containerWidth($width: 90%) {
   width: $width;
   margin: auto;
-  max-width: 1250px;
+  max-width: 1200px;
 }
 
 @mixin overlay($color) {
