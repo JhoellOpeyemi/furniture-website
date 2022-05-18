@@ -46,6 +46,10 @@
     grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     gap: 3.45rem 3rem;
 
+    .product {
+      cursor: pointer;
+    }
+
     .product-image {
       width: 100%;
       height: 500px;
@@ -66,6 +70,7 @@
       font-size: 1.135rem;
       margin-right: 2rem;
       line-height: 1.5;
+      color: $whiteColor;
 
       @include mediaQuery(bigTablet) {
         font-size: 1.2rem;
@@ -79,6 +84,74 @@
 
       @include mediaQuery(bigTablet) {
         font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+.product-details-wrapper {
+  @include flex(flex-start, center, column);
+  margin: 4rem 0;
+
+  @include mediaQuery(bigTablet) {
+    @include flex(flex-start, center, row);
+  }
+
+  .image-container {
+    @include flex();
+    width: 100%;
+    height: 620px;
+    margin-bottom: 2rem;
+
+    @include mediaQuery(tablet) {
+      height: 670px;
+    }
+
+    @include mediaQuery(bigTablet) {
+      width: 50%;
+      margin: 0 3rem 0 0;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .product-details {
+    text-align: center;
+
+    @include mediaQuery(bigTablet) {
+      text-align: left;
+    }
+
+    .name {
+      font-size: 1.7rem;
+    }
+
+    .quantity {
+      @include flex();
+      margin: 2rem 0;
+      gap: 2rem;
+
+      @include mediaQuery(bigTablet) {
+        @include flex(flex-start);
+        margin: 3.5rem 0;
+      }
+
+      .number {
+        font-size: 1.5rem;
+      }
+    }
+
+    .price {
+      color: $secondaryColor;
+      font-size: 2rem;
+      margin-bottom: 3rem;
+
+      @include mediaQuery(bigTablet) {
+        @include flex(flex-start);
       }
     }
   }

@@ -1,26 +1,23 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 
-import { allProducts } from "../../productsObject/AllProducts";
 import { ProductContext } from "../../contexts/ProductContext";
 
-const ProductsFilterBtn = ({ id, name, urlQuery, categoryText }) => {
-  const { setProducts } = useContext(ProductContext);
+const ProductsFilterBtn = ({ name, urlQuery }) => {
+  const { setCurrentPage } = useContext(ProductContext);
 
-  const updateProducts = () => {
-    const categories = Object.entries(allProducts);
-    categories.forEach((category) => {
-      const categoryName = category[0];
-      const categoryProducts = category[1];
-
-      if (categoryName === categoryText) {
-        setProducts(categoryProducts);
-      }
-    });
+  const setToFirstPage = () => {
+    setCurrentPage(1);
   };
 
   return (
-    <NavLink to={urlQuery} className="filter-btn" onClick={updateProducts}>
+    <NavLink
+      to={urlQuery}
+      className={({ isActive }) =>
+        isActive ? "filter-btn selected" : "filter-btn"
+      }
+      onClick={setToFirstPage}
+    >
       {name}
     </NavLink>
   );

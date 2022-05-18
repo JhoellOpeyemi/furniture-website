@@ -7,7 +7,9 @@ const Products = () => {
     <div className="container">
       <Header />
       <ProductsNav />
-      <Outlet />
+      <section className="products-category-section">
+        <Outlet />
+      </section>
     </div>
   );
 };

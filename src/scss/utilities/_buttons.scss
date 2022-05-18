@@ -22,6 +22,16 @@
   }
 }
 
+.cta-btn {
+  font-family: $fontBaloo;
+  color: $whiteColor;
+  background-color: $btnColor;
+  font-size: 1.5rem;
+  padding: 1rem 1.5rem;
+  border-radius: 0.625rem;
+  border: none;
+}
+
 .filter-btn {
   font-size: 1rem;
   font-family: $fontBaloo;
@@ -31,7 +41,7 @@
   padding: 0.75rem 0.875rem;
   border: none;
   border-radius: 0.625rem;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
 
   @include mediaQuery(bigTablet) {
     font-size: 1.25rem;
@@ -43,9 +53,28 @@
 }
 
 .pagination-btn {
-  background-color: $secondaryColor;
+  background-color: transparent;
   border: 1px solid #fff;
   color: #fff;
   font-size: 1.375rem;
   padding: 0.3rem 1rem;
+  transition: all 0.4s ease;
+
+  &.selected {
+    background-color: $secondaryColor;
+  }
+
+  &:not(:last-child) {
+    margin-right: 1rem;
+  }
+}
+
+.quantity-btn {
+  padding: 0.4rem 1rem;
+  font-size: 2.3rem;
+  text-align: center;
+  background-color: darken($color: $btnColor, $amount: 20);
+  color: $whiteColor;
+  border: none;
+  border-radius: 0.5rem;
 }

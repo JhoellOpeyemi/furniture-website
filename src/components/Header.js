@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 import CartIcon from "./CartIcon.js";
 
@@ -20,9 +20,9 @@ const Header = () => {
   return (
     <header className="header">
       <div className="logo-nav-wrapper">
-        <a href="/" className="logo">
+        <Link to="/" className="logo">
           Stix.
-        </a>
+        </Link>
         <nav className={nav ? "nav open" : "nav"}>
           <div className="nav-wrapper">
             <NavLink
@@ -46,9 +46,16 @@ const Header = () => {
             >
               Products
             </NavLink>
-            <a href="/" className="nav-links">
+            <NavLink
+              to="/cart"
+              className={({ isActive }) =>
+                isActive
+                  ? "nav-links cart-icon selected"
+                  : "nav-links cart-icon"
+              }
+            >
               <CartIcon />
-            </a>
+            </NavLink>
           </div>
         </nav>
         <button className="hamburger" onClick={openNav}>
