@@ -53,6 +53,7 @@ const Header = () => {
                   ? "nav-links cart-icon selected"
                   : "nav-links cart-icon"
               }
+              onClick={closeNav}
             >
               <CartIcon />
             </NavLink>

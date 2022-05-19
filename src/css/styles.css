@@ -130,6 +130,7 @@ li {
 }
 
 .quantity-btn {
+  font-family: "Baloo 2", cursive;
   padding: 0.4rem 1rem;
   font-size: 2.3rem;
   text-align: center;
@@ -137,6 +138,11 @@ li {
   color: #eee;
   border: none;
   border-radius: 0.5rem;
+}
+@media screen and (min-width: 850px) {
+  .quantity-btn {
+    padding: 0.4rem 1.5rem;
+  }
 }
 
 .header {
@@ -148,8 +154,10 @@ li {
   }
 }
 .header .logo-nav-wrapper {
-  width: 100%;
   height: 9vh;
+  width: 90%;
+  margin: auto;
+  max-width: 1200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -175,6 +183,7 @@ li {
   clip-path: circle(100px at 50% -20%);
   -webkit-clip-path: circle(100px at 50% -20%);
   transition: all 1s ease-in-out;
+  z-index: 2;
 }
 @media screen and (min-width: 850px) {
   .header .nav {
@@ -278,7 +287,6 @@ li {
 }
 
 .hero-container {
-  position: relative;
   width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
@@ -626,7 +634,20 @@ li {
   gap: 3.45rem 3rem;
 }
 .products-category-section .products-wrapper .product {
+  position: relative;
   cursor: pointer;
+  display: block;
+  padding-bottom: 0.7rem;
+}
+.products-category-section .products-wrapper .product::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(26, 26, 26, 0.3019607843);
+  pointer-events: none;
 }
 .products-category-section .products-wrapper .product-image {
   width: 100%;
@@ -688,19 +709,29 @@ li {
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  position: relative;
   width: 100%;
-  height: 620px;
+  height: 500px;
   margin-bottom: 2rem;
+}
+.product-details-wrapper .image-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(26, 26, 26, 0.3019607843);
 }
 @media screen and (min-width: 600px) {
   .product-details-wrapper .image-container {
-    height: 670px;
+    height: 640px;
   }
 }
 @media screen and (min-width: 850px) {
   .product-details-wrapper .image-container {
     width: 50%;
-    margin: 0 3rem 0 0;
+    margin: 0 5.5rem 0 0;
   }
 }
 .product-details-wrapper .image-container img {
@@ -725,7 +756,6 @@ li {
   align-items: center;
   flex-direction: row;
   margin: 2rem 0;
-  gap: 2rem;
 }
 @media screen and (min-width: 850px) {
   .product-details-wrapper .product-details .quantity {
@@ -738,6 +768,7 @@ li {
 }
 .product-details-wrapper .product-details .quantity .number {
   font-size: 1.5rem;
+  margin: 0 2rem;
 }
 .product-details-wrapper .product-details .price {
   color: #e2bd92;
@@ -751,6 +782,24 @@ li {
     align-items: center;
     flex-direction: row;
   }
+}
+
+.product-prompt-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 45vh;
+}
+.product-prompt-container .prompt {
+  text-align: center;
+  font-size: 1.4rem;
+  max-width: 600px;
+  line-height: 1.8;
+  letter-spacing: 2px;
+}
+.product-prompt-container .cta-btn {
+  margin-top: 4rem;
 }
 
 .pagination {
@@ -770,4 +819,79 @@ li {
 .cart-container {
   text-align: center;
   margin: 4.875rem 0;
+}
+.cart-container .cart-items-wrapper {
+  margin: 1.5625rem 0;
+}
+.cart-container .cart-items {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  padding: 2.1875rem 0;
+}
+.cart-container .cart-items:not(:last-child) {
+  border-bottom: 1px solid #656565;
+}
+.cart-container .cart-items .image-container {
+  width: 7.5rem;
+  margin-right: 1.3rem;
+}
+.cart-container .cart-items .image-container img {
+  width: 100%;
+}
+.cart-container .cart-items .cart-item-details {
+  text-align: left;
+  flex: 1;
+}
+.cart-container .cart-items .cart-item-details .name {
+  font-weight: 500;
+  font-size: 1.15rem;
+}
+.cart-container .cart-items .cart-item-details .quantity {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  margin: 1.2rem 0;
+}
+.cart-container .cart-items .cart-item-details .quantity-btn {
+  font-size: 1.45rem;
+  padding: 0.1rem 0.625rem;
+}
+.cart-container .cart-items .cart-item-details .quantity .number {
+  margin: 0 1.5rem;
+}
+.cart-container .cart-items .cart-item-details .price {
+  font-family: "Baloo 2", cursive;
+  font-size: 1.5rem;
+  color: #e2bd92;
+}
+.cart-container .prompt {
+  font-size: 1.375rem;
+  padding: 0 2.5rem;
+  margin: 4.6rem 0 3.7rem;
+  letter-spacing: 2px;
+}
+@media screen and (min-width: 850px) {
+  .cart-container .prompt {
+    font-size: 1.5rem;
+  }
+}
+
+.cart-loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #131313;
+}
+.cart-loader-container p {
+  margin-top: 2rem;
+  font-size: 1.4rem;
 }

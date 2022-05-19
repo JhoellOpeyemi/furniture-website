@@ -47,7 +47,16 @@
     gap: 3.45rem 3rem;
 
     .product {
+      position: relative;
       cursor: pointer;
+      display: block;
+      padding-bottom: 0.7rem;
+
+      &::before {
+        content: "";
+        @include overlay($overlay);
+        pointer-events: none;
+      }
     }
 
     .product-image {
@@ -99,17 +108,23 @@
 
   .image-container {
     @include flex();
+    position: relative;
     width: 100%;
-    height: 620px;
+    height: 500px;
     margin-bottom: 2rem;
 
+    &::before {
+      content: "";
+      @include overlay($overlay);
+    }
+
     @include mediaQuery(tablet) {
-      height: 670px;
+      height: 640px;
     }
 
     @include mediaQuery(bigTablet) {
       width: 50%;
-      margin: 0 3rem 0 0;
+      margin: 0 5.5rem 0 0;
     }
 
     img {
@@ -133,7 +148,6 @@
     .quantity {
       @include flex();
       margin: 2rem 0;
-      gap: 2rem;
 
       @include mediaQuery(bigTablet) {
         @include flex(flex-start);
@@ -142,6 +156,7 @@
 
       .number {
         font-size: 1.5rem;
+        margin: 0 2rem;
       }
     }
 
@@ -154,6 +169,23 @@
         @include flex(flex-start);
       }
     }
+  }
+}
+
+.product-prompt-container {
+  @include flex(center, center, column);
+  height: 45vh;
+
+  .prompt {
+    text-align: center;
+    font-size: 1.4rem;
+    max-width: 600px;
+    line-height: 1.8;
+    letter-spacing: 2px;
+  }
+
+  .cta-btn {
+    margin-top: 4rem;
   }
 }
 

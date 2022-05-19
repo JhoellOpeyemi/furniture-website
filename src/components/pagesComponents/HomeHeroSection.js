@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../Header";
 
 import video from "../../assets/hero-video-bg.mp4";
 
@@ -7,7 +6,6 @@ const Hero = () => {
   return (
     <div className="hero-container">
       <div className="hero-section">
-        <Header />
         <video
           src={video}
           muted

@@ -14,7 +14,7 @@ import Pagination from "../Pagination";
 import Product from "./Product";
 
 const ProductsCategory = () => {
-  const { products, setProducts, currentProducts } = useContext(ProductContext);
+  const { setProducts, currentProducts } = useContext(ProductContext);
   const params = useParams();
 
   useEffect(() => {

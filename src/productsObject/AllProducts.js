@@ -3,64 +3,64 @@ export const livingRooms = [
     id: 1,
     image:
       "https://images.unsplash.com/photo-1611755489400-3c53602ab783?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjgwMzd8MHwxfGNvbGxlY3Rpb258MXw3OTI1MDEwN3x8fHx8Mnx8MTY1MjQzNjY0MQ&ixlib=rb-1.2.1&q=80&w=400",
-    name: "living room with 3 chairs",
-    price: "$1000",
+    name: "Classic Black Living Room Set",
+    price: "$1,500",
   },
   {
     id: 2,
     image:
       "https://images.unsplash.com/photo-1581688344756-4081c0d3abe9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjgwMzd8MHwxfGNvbGxlY3Rpb258Mnw3OTI1MDEwN3x8fHx8Mnx8MTY1MjQzNjY0MQ&ixlib=rb-1.2.1&q=80&w=400",
-    name: "living room with 3 chairs",
-    price: "$1000",
+    name: "Simple Living Room",
+    price: "$700",
   },
   {
     id: 3,
     image:
       "https://images.unsplash.com/photo-1556586038-29f26c3ceb20?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjgwMzd8MHwxfGNvbGxlY3Rpb258M3w3OTI1MDEwN3x8fHx8Mnx8MTY1MjQzNjY0MQ&ixlib=rb-1.2.1&q=80&w=400",
-    name: "living room with 3 chairs",
+    name: "Wooden Living Room Set",
     price: "$1000",
   },
   {
     id: 4,
     image:
       "https://images.unsplash.com/photo-1550177693-8919ca17f37f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjgwMzd8MHwxfGNvbGxlY3Rpb258NHw3OTI1MDEwN3x8fHx8Mnx8MTY1MjQzNjY0MQ&ixlib=rb-1.2.1&q=80&w=400",
-    name: "living room with 3 chairs",
-    price: "$1000",
+    name: "Three Seater Grey Sofa And A Small Table",
+    price: "$900",
+  },
+  {
+    id: 5,
+    image:
+      "https://images.unsplash.com/photo-1566896713437-6d95c6fd2d44?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjgwMzd8MHwxfGNvbGxlY3Rpb258MTB8NzkyNTAxMDd8fHx8fDJ8fDE2NTI0MzY2NDE&ixlib=rb-1.2.1&q=80&w=400",
+    name: "Set Of One Seater Armchairs",
+    price: "$1,400",
   },
   {
     id: 6,
     image:
       "https://images.unsplash.com/photo-1584821972088-a5109d34a740?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjgwMzd8MHwxfGNvbGxlY3Rpb258NXw3OTI1MDEwN3x8fHx8Mnx8MTY1MjQzNjY0MQ&ixlib=rb-1.2.1&q=80&w=400",
-    name: "living room with 3 chairs",
-    price: "$1000",
+    name: "Modern Living Room Set",
+    price: "$2,500",
   },
   {
     id: 7,
     image:
       "https://images.unsplash.com/photo-1585399239833-fe93e42453f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjgwMzd8MHwxfGNvbGxlY3Rpb258Nnw3OTI1MDEwN3x8fHx8Mnx8MTY1MjQzNjY0MQ&ixlib=rb-1.2.1&q=80&w=400",
-    name: "living room with 3 chairs",
-    price: "$1000",
+    name: "One Seater Armchair And A Leg Raise",
+    price: "$500",
   },
   {
     id: 8,
     image:
       "https://images.unsplash.com/photo-1606074280798-2dabb75ce10c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjgwMzd8MHwxfGNvbGxlY3Rpb258OHw3OTI1MDEwN3x8fHx8Mnx8MTY1MjQzNjY0MQ&ixlib=rb-1.2.1&q=80&w=400",
-    name: "living room with 3 chairs",
-    price: "$1000",
+    name: "L-Shaped Sofa And A Single Chair",
+    price: "$950",
   },
   {
     id: 9,
     image:
       "https://images.unsplash.com/photo-1556702571-3e11dd2b1a92?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjgwMzd8MHwxfGNvbGxlY3Rpb258OXw3OTI1MDEwN3x8fHx8Mnx8MTY1MjQzNjY0MQ&ixlib=rb-1.2.1&q=80&w=400",
-    name: "living room with 3 chairs",
-    price: "$1000",
-  },
-  {
-    id: 10,
-    image:
-      "https://images.unsplash.com/photo-1566896713437-6d95c6fd2d44?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjgwMzd8MHwxfGNvbGxlY3Rpb258MTB8NzkyNTAxMDd8fHx8fDJ8fDE2NTI0MzY2NDE&ixlib=rb-1.2.1&q=80&w=400",
-    name: "living room with 3 chairs",
-    price: "$1000",
+    name: "Two Seater Sofa And A Desk",
+    price: "$900",
   },
 ];
 
@@ -69,36 +69,36 @@ export const diningRooms = [
     id: 1,
     image:
       "https://images.unsplash.com/photo-1583845112239-97ef1341b271?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjgwMzd8MHwxfGNvbGxlY3Rpb258MXxPS1dRR0FjejV3d3x8fHx8Mnx8MTY1MjQzNjcyNg&ixlib=rb-1.2.1&q=80&w=400",
-    name: "dining room with 3 chairs",
-    price: "$1000",
+    name: "Round Dining Table With 6 Chairs",
+    price: "$800",
   },
   {
     id: 2,
     image:
       "https://images.unsplash.com/photo-1572297259518-0974576b6738?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjgwMzd8MHwxfGNvbGxlY3Rpb258MnxPS1dRR0FjejV3d3x8fHx8Mnx8MTY1MjQzNjcyNg&ixlib=rb-1.2.1&q=80&w=400",
-    name: "dining room with 3 chairs",
-    price: "$1000",
+    name: "Big Rectangular Dining Table With 12 Chairs",
+    price: "$1,500",
   },
   {
     id: 3,
     image:
       "https://images.unsplash.com/photo-1617098709804-705581f844eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjgwMzd8MHwxfGNvbGxlY3Rpb258NXxPS1dRR0FjejV3d3x8fHx8Mnx8MTY1MjQzNjcyNg&ixlib=rb-1.2.1&q=80&w=400",
-    name: "dining room with 3 chairs",
+    name: "Small Rectangular Dining Table With 6 Chairs",
     price: "$1000",
   },
   {
     id: 4,
     image:
       "https://images.unsplash.com/photo-1548701385-5d7e88ec51bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjgwMzd8MHwxfGNvbGxlY3Rpb258NnxPS1dRR0FjejV3d3x8fHx8Mnx8MTY1MjQzNjcyNg&ixlib=rb-1.2.1&q=80&w=400",
-    name: "dining room with 3 chairs",
-    price: "$1000",
+    name: "Dining Table With 3 Chairs",
+    price: "$550",
   },
   {
     id: 5,
     image:
       "https://images.unsplash.com/photo-1615920606214-6428b3324c74?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjgwMzd8MHwxfGNvbGxlY3Rpb258OHxPS1dRR0FjejV3d3x8fHx8Mnx8MTY1MjQzNjcyNg&ixlib=rb-1.2.1&q=80&w=400",
-    name: "dining room with 3 chairs",
-    price: "$1000",
+    name: "Small Round Dining Table With 2 Chairs",
+    price: "$300",
   },
 ];
 

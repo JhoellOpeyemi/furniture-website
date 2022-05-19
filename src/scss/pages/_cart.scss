@@ -1,4 +1,77 @@
 .cart-container {
   text-align: center;
   margin: 4.875rem 0;
+
+  .cart-items-wrapper {
+    margin: 1.5625rem 0;
+  }
+
+  .cart-items {
+    @include flex(flex-start, center, row);
+    padding: 2.1875rem 0;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $cartDividerColor;
+    }
+
+    .image-container {
+      width: 7.5rem;
+      margin-right: 1.3rem;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .cart-item-details {
+      text-align: left;
+      flex: 1;
+
+      .name {
+        font-weight: 500;
+        font-size: 1.15rem;
+      }
+
+      .quantity {
+        @include flex(flex-start);
+        margin: 1.2rem 0;
+
+        &-btn {
+          font-size: 1.45rem;
+          padding: 0.1rem 0.625rem;
+        }
+
+        .number {
+          margin: 0 1.5rem;
+        }
+      }
+
+      .price {
+        font-family: $fontBaloo;
+        font-size: 1.5rem;
+        color: $secondaryColor;
+      }
+    }
+  }
+
+  .prompt {
+    font-size: 1.375rem;
+    padding: 0 2.5rem;
+    margin: 4.6rem 0 3.7rem;
+    letter-spacing: 2px;
+
+    @include mediaQuery(bigTablet) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.cart-loader-container {
+  @include flex(center, center, column);
+  @include overlay($bgColor);
+
+  p {
+    margin-top: 2rem;
+    font-size: 1.4rem;
+  }
 }

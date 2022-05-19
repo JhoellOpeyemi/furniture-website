@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { CartContext } from "../../contexts/CartContext";
 
 const Product = ({ product }) => {
-  const { productDetails, setProductDetails } = useContext(CartContext);
+  const { setProductDetails } = useContext(CartContext);
   const { image, name, price } = product;
 
   let formattedName = name.split(" ").join("-");
