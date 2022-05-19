@@ -110,7 +110,7 @@
     @include flex();
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 450px;
     margin-bottom: 2rem;
 
     &::before {
@@ -119,7 +119,7 @@
     }
 
     @include mediaQuery(tablet) {
-      height: 640px;
+      height: 600px;
     }
 
     @include mediaQuery(bigTablet) {
@@ -142,6 +142,7 @@
     }
 
     .name {
+      font-weight: 500;
       font-size: 1.7rem;
     }
 

@@ -3,7 +3,8 @@
   margin: 4.875rem 0;
 
   .cart-items-wrapper {
-    margin: 1.5625rem 0;
+    margin: 1.5625rem auto;
+    max-width: 59rem;
   }
 
   .cart-items {
@@ -18,8 +19,14 @@
       width: 7.5rem;
       margin-right: 1.3rem;
 
+      @include mediaQuery(tablet) {
+        width: 11rem;
+        margin-right: 3.5rem;
+      }
+
       img {
         width: 100%;
+        object-fit: cover;
       }
     }
 
@@ -27,9 +34,22 @@
       text-align: left;
       flex: 1;
 
+      @include mediaQuery(bigTablet) {
+        @include flex(space-between);
+      }
+
       .name {
         font-weight: 500;
         font-size: 1.15rem;
+
+        @include mediaQuery(tablet) {
+          font-size: 1.3rem;
+        }
+
+        @include mediaQuery(bigTablet) {
+          font-size: 1.5rem;
+          width: 30%;
+        }
       }
 
       .quantity {
@@ -38,11 +58,18 @@
 
         &-btn {
           font-size: 1.45rem;
-          padding: 0.1rem 0.625rem;
         }
 
         .number {
           margin: 0 1.5rem;
+        }
+
+        @include mediaQuery(tablet) {
+          margin: 1.7rem 0;
+
+          .number {
+            margin: 0 1.9rem;
+          }
         }
       }
 
@@ -50,6 +77,10 @@
         font-family: $fontBaloo;
         font-size: 1.5rem;
         color: $secondaryColor;
+
+        @include mediaQuery(bigTablet) {
+          font-size: 1.75rem;
+        }
       }
     }
   }
@@ -68,7 +99,7 @@
 
 .cart-loader-container {
   @include flex(center, center, column);
-  @include overlay($bgColor);
+  @include overlay($bgColor, fixed);
 
   p {
     margin-top: 2rem;

@@ -4,8 +4,8 @@
   max-width: 1200px;
 }
 
-@mixin overlay($color) {
-  position: absolute;
+@mixin overlay($color, $position: absolute) {
+  position: $position;
   top: 0;
   right: 0;
   width: 100%;

@@ -71,7 +71,7 @@
 
 .quantity-btn {
   font-family: $fontBaloo;
-  padding: 0.4rem 1rem;
+  padding: 0 0.8rem;
   font-size: 2.3rem;
   text-align: center;
   background-color: darken($color: $btnColor, $amount: 20);
@@ -80,6 +80,6 @@
   border-radius: 0.5rem;
 
   @include mediaQuery(bigTablet) {
-    padding: 0.4rem 1.5rem;
+    padding: 0 0.8rem;
   }
 }
